@@ -207,9 +207,22 @@ div.highlightTextIn a:hover:before {
     background-color: whitesmoke;
     border-radius: 75px;
 
+}
+.omeletForAll{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: whitesmoke;
+    text-align: center;
+    border-radius: 100px;
+    font-family: "Apple Braille";
+    font-size: 18px;
+    overflow: scroll;
+    height: 300px;
+    width: 300px;
 
 }
-.ingredBox{
-
-
+.myImages{
+    height: 200px;
+    width: 200px;
 }

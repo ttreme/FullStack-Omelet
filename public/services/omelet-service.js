@@ -13,7 +13,13 @@ this.getOmelets = function(){
 this.postOmelet = function(omelet){
 return $http.post("/omelets", omelet).then(function(response){
         return response.data;
+
     })
 }
+this.deleteMe = function(omelet){
+return $http.delete("omelets/" + omelet._id, omelet).then(function(response){
+    return response.data;
 
+})}
 })
+

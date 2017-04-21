@@ -14,6 +14,11 @@ app.controller("homeController", ["$scope","omeletService", function($scope, ome
 
     $scope.omeletFunction = function (omelet){
         omeletService.postOmelet(omelet);
+        window.location.reload();
+    }
+    $scope.deleteMe = function(omelet){
+        omeletService.deleteMe(omelet);
+        window.location.reload();
     }
 
 }])

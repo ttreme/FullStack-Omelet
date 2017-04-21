@@ -5,7 +5,8 @@ var omeletSchema = new Schema ({
     title : String,
     description : String,
     ingredients : [String],
-    eggs : Number
+    eggs : Number,
+    img : String
 });
 var Omelet = mongoose.model("Omelet", omeletSchema);
 

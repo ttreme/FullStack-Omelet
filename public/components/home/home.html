@@ -8,12 +8,16 @@
             <div class="parallaxStuff">
                 <h1 class="col-xs-offset-4 col-xs-4"> Omelet Haven</h1>
 
-                <div ng-repeat = "omelet in omelets track by $index">
-                    <div>{{omelet.title}}</div>
-                    <div>{{omelet.description}}</div>
-                    <div>{{omelet.ingredients}}</div>
-                    <div>{{omelet.eggs}}</div>
-                </div>
+
+            </div>
+            <div class="omeletForAll col-xs-4 col-xs-offset"  ng-repeat = "omelet in omelets track by $index">
+
+                <div>Omelet Name: {{omelet.title}}</div>
+                <div>Description: {{omelet.description}}</div>
+                <div>Ingredients are: {{omelet.ingredients}}</div>
+                <div>Amount of Eggs Used: {{omelet.eggs}}</div>
+                <img class="myImages" ng-src="{{omelet.img}}">
+                <button class="btn btn-danger" type="submit" ng-click="deleteMe(omelet)">Delete</button>
             </div>
         </div>
 
@@ -33,7 +37,8 @@
                 <input class="col-xs-5 ingredBox" type="text" ng-model="omelet.description" placeholder="Omelet Description" >
                 <input class="col-xs-5 ingredBox col-xs-offset-1" type="text" ng-model="omelet.ingredients" placeholder="Ingredients Used">
                 <input class="col-xs-5 ingredBox" type="number" ng-model="omelet.eggs"  placeholder="Amount of Eggs">
-                <button class="col-xs-4  col-xs-offset-4 btn btn-success" ng-click="omeletFunction(omelet)">Submit</button>
+                <input class="col-xs-6 col-xs-offset-3 ingredBox" type="URL" ng-model="omelet.img"  placeholder="Image Url">
+                <button  class="col-xs-4  col-xs-offset-4 btn btn-success" ng-click="omeletFunction(omelet)">Submit</button>
             </div>
         </form>
     </div>
